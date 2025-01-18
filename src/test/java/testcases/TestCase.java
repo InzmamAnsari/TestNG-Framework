@@ -20,7 +20,7 @@ public class TestCase extends BaseClass {
     HomePage hp;
     ProductPage pr;
     static ExtentReports report;
-   public static ExtentTest test;
+    public static ExtentTest test;
     static ExtentReports extent = new ExtentReports();
 
     @BeforeMethod
@@ -38,7 +38,7 @@ public class TestCase extends BaseClass {
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File Dest = new File("src/../ExecImages" + System.currentTimeMillis() + ".png");
         String errflpath = Dest.getAbsolutePath();
-        FileUtils.copyFile(srcFile,Dest);
+        FileUtils.copyFile(srcFile, Dest);
         return errflpath;
     }
 
@@ -52,27 +52,27 @@ public class TestCase extends BaseClass {
     }
 
     @Test(priority = 2)
-    public void verify_formal_shoe_firstProduct(){
+    public void verify_formal_shoe_firstProduct() {
         test = extent.createTest("Validate First Formal Shoe Title", "This test validates first formal shoe types are correct or not");
         pr.formal_shoes_firstProduct_verify_title();
 
     }
 
     @Test(priority = 3)
-    public void verify_sport_shoe_firstProduct(){
+    public void verify_sport_shoe_firstProduct() throws InterruptedException {
         test = extent.createTest("Validate First Sport Shoe Title", "This test validates first sports shoe types are correct or not");
         pr.sports_shoes_firstProduct_verify_title();
 
     }
 
     @Test(priority = 4)
-    public void verify_sneakers_firstProduct(){
+    public void verify_sneakers_firstProduct() {
         test = extent.createTest("Validate First Sneakers Shoe Title", "This test validates first  sneakers shoe types are correct or not");
         pr.sneakers_firstProduct_verify_title();
     }
 
     @AfterTest
-    public void flush(){
+    public void flush() {
         extent.flush();
     }
 

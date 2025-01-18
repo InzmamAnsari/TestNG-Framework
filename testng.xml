@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/izmamulansari/Downloads/SeleniumTestNG">
+        <classes>
+            <class name="testcases.TestCase">
+                <methods>
+                    <include name="verify_title"/>
+                    <include name="verify_formal_shoe_firstProduct"/>
+                    <include name="verify_sport_shoe_firstProduct"/>
+                    <include name="verify_sneakers_firstProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
